@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAZ Travel</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #a6c0fe, #f68084); /* Мягкий градиент */
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 28px; /* Увеличенный размер шрифта для логотипа */
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 30px; /* Увеличенный интервал между ссылками */
+        }
+
+        .nav-links li {
+            display: inline-block;
+        }
+
+        .nav-links a {
+            font-size: 18px; /* Увеличенный размер шрифта для ссылок */
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #1e90ff;
+            text-decoration: underline;
+        }
+
+        #google_translate_element {
+            margin-left: 20px;
+        }
+
+        .goog-te-gadget-simple {
+            border: none;
+            background-color: transparent;
+            color: white;
+        }
+
+        .goog-te-menu-value span {
+            color: white;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ccc;
+            margin: 20px 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 100px auto; /* Добавим отступ, чтобы содержимое не перекрывалось навигационной панелью */
+            padding: 40px 30px;
+            background-color: rgba(255, 255, 255, 0.9); /* Белый фон с прозрачностью */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 15px; /* Более закругленные углы */
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        h2 {
+            color: #000000;
+            margin-bottom: 20px;
+            font-size: 2em;
+            border-bottom: 2px solid #faf7f7;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.8;
+            color: #000000;
+            margin-bottom: 20px;
+            font-size: 1.2em; /* Немного крупнее шрифт */
+        }
+
+        strong {
+            color: #333;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            color: #888;
+            font-size: 1.2em;
+        }
+    </style>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'ru',
+                includedLanguages: 'en,kk,it,tr,fr,ja',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <nav class="navbar">
+                <a href="https://www.linkedin.com/in/nurislam-raimbekov-476959324?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2FeQNU%2BHlSYikaYJrAq6EJA%3D%3D" class="logo">KAZ🌞Travel</a>
+                <ul class="nav-links">
+                    <li><a href="{{ url_for('index') }}">Главная</a></li>
+                    <li><a href="{{ url_for('pro_nas') }}">О компании</a></li>
+                    <li><a href="{{ url_for('find') }}">Поиск тура</a></li>
+                    <li><a href="{{ url_for('enter') }}">Войти</a></li>
+                </ul>
+                <div id="google_translate_element"></div>
+            </nav>
+        </div>
+        <hr>
+    </header>
+    <div class="container">
+        <h2>О нас</h2>
+        <p>Компания KAZ Travel — ведущий поставщик туристических услуг в Казахстане, предлагающий широкий выбор туров, путевок и экскурсий по самым живописным уголкам страны. Мы гордимся тем, что знакомим наших клиентов с культурой, природой и традициями Казахстана, обеспечивая безопасные и незабываемые путешествия.</p>
+        <p>Наша команда профессионалов специализируется на организации туров, которые охватывают как крупные города, так и уникальные природные заповедники и малоизвестные уголки страны. Мы тщательно подбираем маршруты, которые подойдут для разных категорий путешественников — от тех, кто предпочитает активный отдых и приключения, до тех, кто ищет спокойные экскурсии и отдых в гармонии с природой.</p>
+        <p>KAZ Travel сотрудничает с проверенными местными и международными партнёрами, обеспечивая высокий уровень сервиса и комфорта для каждого клиента. Наши гиды — это настоящие эксперты, которые не только хорошо знают регионы Казахстана, но и умеют поделиться своей любовью к родной земле, делая каждое путешествие особенным.</p>
+        <p>С нами вы сможете открыть для себя Казахстан с новой стороны и испытать те эмоции, которые останутся в памяти надолго. Мы стремимся сделать каждое путешествие безопасным, удобным и наполненным яркими впечатлениями.</p>
+        <p class="footer"><strong>Спасибо, что выбираете нас!</strong></p>
+    </div>
+</body>
+</html>

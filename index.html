@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAZ Travel</title>
+      <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #4682B4;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00BFFF;
+}
+
+#google_translate_element {
+    margin-left: 20px;
+}
+
+.goog-te-gadget-simple {
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+.goog-te-menu-value span {
+    color: white;
+}
+
+p {
+  font-size: 25px;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.box-shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popular-destinations {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: white;
+    margin-top: 20px;
+}
+
+.destinations-carousel {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.destination-card {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(25% - 40px);
+    box-sizing: border-box;
+    position: relative;
+}
+
+.destination-card h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.destination-card p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.destination-card a.read-more {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+
+.destination-card a.read-more:hover {
+    background-color: #0056b3;
+}
+
+.why-choose-us {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: white;
+    margin-top: 20px;
+}
+
+.why-choose-us iframe {
+    margin: 20px 0;
+}
+
+.user-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.callback, .phone {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.callback {
+    background-color: #007BFF;
+}
+
+.callback:hover {
+    background-color: #0056b3;
+}
+
+.phone {
+    background-color: #28a745;
+}
+
+.phone:hover {
+    background-color: #218838;
+}
+</style>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+         new google.translate.TranslateElement({pageLanguage: 'ru', includedLanguages: 'en,kk,it,tr,fr,ja', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element'); }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <nav class="navbar">
+                <a href="https://www.linkedin.com/in/nurislam-raimbekov-476959324?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2FeQNU%2BHlSYikaYJrAq6EJA%3D%3D" class="logo">KAZ🌞Travel</a>
+                <ul class="nav-links">
+                    <li><a href="{{ url_for('index') }}">Главная страница</a> </li>
+                    <li><a href="{{ url_for('pro_nas') }}">О компании</a> </li>
+                    <li><a href="{{ url_for('find') }}">Поиск тура</a> </li>
+                   <li> <a href="{{ url_for('enter') }}">Войти</a> </li>
+                </ul>
+                <div id="google_translate_element"> </div>
+            </nav>
+        </div>
+  <hr>
+    </header>
+
+    <section class="popular-destinations">
+        <h2 style="font-style:italic"> ТОП-4 популярные направления по Казахстану</h2>
+            <div class="destinations-carousel">
+            <div class="destination-card">
+                <h3 style="font-style:candra; font-size: 20px;">Заилийское Алатау, Алматинская область</h3>
+                <p style="font-style:candra; font-size: 20px;">Дата: 15 январь  2025</p>
+                <p style="font-style:candra; font-size: 20px;">Продолжительность: 7 дней</p>
+                <p style="font-style:candra; font-size: 20px;">Цена: 50000 тенге
+                <p style="font-style:candra; font-size: 20px;" >Заилийский Алатау — горная система, расположенная на юго-востоке Казахстана, в Алматинской области. Название связано с рекой Или, которая протекает вблизи этих гор. «Алатау» с казахского переводится как «пестрые горы». Достопримечательность является частью горной системы Тянь-Шань.
+
+Заилийский Алатау — одно из главных направлений для любителей природы и активного отдыха в Казахстане. Благодаря своему разнообразному рельефу и климатическим условиям, здесь можно заняться альпинизмом, любительским хайкингом, сноубордингом и многим-многим другим.
+
+Среди удивительных мест — Большое Алматинское озеро, окруженное лесом, национальный природный парк «Іле Алатау», где можно прогуляться по пешим маршрутам, насладиться горной панорамой и даже увидеть диких животных, а также урочище Кок-Жайляу с великолепной природой. Еще одна достопримечательность Заилийского Алатау — высокогорный каток Медео, который находится на высоте 1691 метров над уровнем моря. Это, кстати, самый большой в мире каток на открытом воздухе. И, конечно же, «Шымбулак» — горнолыжный курорт на высоте 2200-2500 метров, где можно покататься на лыжах и сноуборде, занесенный в Книгу рекордов Гиннеса.</p>
+                <p style="font-style:candra; font-size: 20px;">Как добраться. В Алматы можно сесть на автобус, идущий в сторону Медео. Оттуда можно пересесть на фуникулер до горнолыжного курорта Шымбулак, который находится в предгорьях Заилийского Алатау. Прямо до Медео едут автобусы №12 или №6. В Алматы также множество такси, которые могут доставить вас до начала троп, ведущих в горы. Если хотите добраться самостоятельно, то из Алматы нужно ехать по улице Достык до пункта назначения, как правило, это Медео или Шымбулак. Дорога асфальтирована и находится в хорошем состоянии.</p>
+                 <picture>
+            <img src="https://iskatel.com/wp-content/uploads/2023/09/bolshoe-almatinskoe-ozero-v-zailiyskom-alatau-1120x500.jpg"   width="825" height="500">
+        </picture>
+                 <picture>
+            <img src="https://www.mk.ru/upload/entities/2022/11/30/09/articlesImages/image/78/15/03/8d/8ac8b16857b207d29ad8b9eae0eedaee.jpg"   width="825" height="500">
+        </picture>
+            </div>
+
+             <div class="destinations-carousel">
+            <div class="destination-card">
+                <h3 style="font-style:candra; font-size: 20px;">Чарынский каньон, Алматинская область</h3>
+                <p style="font-style:candra; font-size: 20px;">Дата: 15 январь  2025</p>
+                <p style="font-style:candra; font-size: 20px;">Продолжительность: 7 дней</p>
+                <p style="font-style:candra; font-size: 20px;">Цена: 50000 тенге
+                <p style="font-style:candra; font-size: 20px;">Чарынский каньон, или Шарынский, протянулся вдоль реки Чарын на 154 километра. Его часто сравнивают с Гранд-Каньоном в Северной Америке из-за схожей структуры и видов.
+
+Считается, что Чарынский каньон сформировался около 12 миллионов лет назад в результате эрозионных процессов, вызванных деятельностью ветра и воды. Со временем река Чарын вымыла в скальных породах глубокие ущелья и создала формы, напоминающие замки и башни. Территория каньона была заселена древними цивилизациями, что подтверждают археологические находки.
+
+Долина Замков — одна из самых известных частей Чарынского каньона, получившая название за схожесть удивительных скальных образований с замками и башнями. Прогулка по этой долине занимает около 2-3 часов. Река Чарын — отличное место для рафтинга и рыбалки.  Вода в реке холодная и быстрая, поэтому отправляйтесь только с гидом или знающими людьми!
+
+Также в районе каньона находится одна из самых старых рощ саксаула в Центральной Азии. Возраст некоторых деревьев достигает 500-600 лет. Тут же в ясеневой роще растет реликтовый согдийский ясень, разновидности которого уже больше 25 миллионов лет.</p>
+                <p style="font-style:candra; font-size: 20px;">Как добраться. Прямых автобусных рейсов на Чарын из Алматы нет, но можно воспользоваться междугородними такси до Кегена, а оттуда попытаться словить попутку до Чарына. На машине из Алматы нужно ехать по трассе А351 или А352 до поворота на Чарынский каньон. Дорога занимает около 3 часов (200 километров). Путь пролегает через живописные места и хорошие асфальтированные дороги.</p>
+            <picture>
+            <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQJy9BNFh2OSFVGBdF19srP1AUdYmeixOFU7ujUK1uqhVSnT7V9TH-cAf8EPDrzgXh2N3-4UWsZLZyaLuyfk611XENSiN5RSfAzXa2V9Q"   width="825" height="500">
+        </picture>
+                 <picture>
+            <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSxFp3QbREbbz9ebawvD92RMtOL_M6A9gwkfx0050uJUWXOBFfpvV83PLqQfSmx_k1q9-CqZrRlj1_7v312pMBwX4-CFtJse7kWnqxLWA"   width="825" height="500">
+        </picture>
+            </div>
+                  </div>
+
+
+             <div class="destinations-carousel">
+            <div class="destination-card">
+                <h3 style="font-style:candra; font-size: 20px;">Озера Кольсай, Алматинская область</h3>
+                <p style="font-style:candra; font-size: 20px;">Дата: 15 январь  2025</p>
+                <p style="font-style:candra; font-size: 20px;">Продолжительность: 7 дней</p>
+                <p style="font-style:candra; font-size: 20px;">Цена: 50000 тенге
+                <p style="font-style:candra; font-size: 20px;">Кольсай — система из трех озер, хотя среди масс достопримечательность известна как «озеро». Достопримечательно заслуженно входит в список красивых мест в Казахстане. Кольсай находится на территории национального парка «Көлсай көлдері». Водоемы расположены в Кунгей-Алатау, недалеко от границы с Кыргызстаном, и окружены величественными горами и густыми лесами.
+Название «Кольсай» происходит от казахского слова «көл» (озеро) и «сай» (ущелье). Водоемы образовались в результате тектонических процессов и последующих оползней, которые перекрыли русло реки, образовав естественные плотины.
+Первое озеро Кольсай — самое доступное из трех озер, расположено на высоте 1818 метров над уровнем моря. К нему можно добраться на автомобиле. Оно окружено густыми еловыми лесами, а его воды отличаются удивительной чистотой и прозрачностью. Здесь можно покататься на лодке, порыбачить или просто погулять вокруг него. Это одно из популярных мест для фото казахстанцев.Второе находится на высоте 2252 метров и требует пешего перехода от первого. Путь к нему занимает около 3-4 часов и проходит через живописные горные ландшафты. Второе озеро также очень красиво и менее посещаемо, что делает его идеальным для уединенного отдыха.</p>
+                <p style="font-style:candra; font-size: 20px;">Как добраться.Из ближайшего населенного пункта, села Саты, можно дойти пешком до первого Кольсайского озера. Прогулка занимает около 3-4 часов по хорошей тропе. Прямых рейсов до Кольсая нет. Можно доехать до села Саты на автобусе или такси от Алматы, а затем пешком или на уазике до озер. На машине нужно также ехать по трассе A351 до села Саты, затем свернуть на дорогу к Кольсайским озерам. Дорога занимает около 4-5 часов (300 километров) и включает в себя горные серпантины и грунтовые участки</p>
+                <picture>
+            <img src="https://24.kz/images/AIGUL/96/4.jpg"   width="825" height="500">
+        </picture>
+                 <picture>
+              <img src= "https://static.tildacdn.pro/tild3366-3539-4561-b963-656561383763/-.jpg" width="825" height="500">
+                     </picture>
+            </div>
+</div>
+
+            <div class="destinations-carousel">
+            <div class="destination-card">
+                <h3 style="font-style:candra; font-size: 20px;"> Пик Хан-Тенгри, горы Центрального Тянь-Шаня</h3>
+                <p style="font-style:candra; font-size: 20px;">Дата: 15 январь  2025</p>
+                <p style="font-style:candra; font-size: 20px;">Продолжительность: 7 дней</p>
+                <p style="font-style:candra; font-size: 20px;">Цена: 50000 тенге
+                <p style="font-style:candra; font-size: 20px;">Пик Хан-Тенгри — самая высокая вершина в Казахстане. Его высота составляет 7010 метров над уровнем моря, что делает его третьей по высоте горой в Тянь-Шане после пиков Победы и Жусупа Алиева. Хан-Тенгри находится на границе Казахстана, Кыргызстана и Китая.
+
+Название пика переводится как «Повелитель неба». В древние времена она почиталась как священное место. Первое зарегистрированное восхождение на пик Хан-Тенгри было совершено в 1931 году украинской экспедицией под руководством Михаила Погребецкого.
+
+Пик Хан-Тенгри является одной из самых популярных вершин среди альпинистов благодаря своей высоте, технической сложности и великолепным видам. Восхождение на Хан-Тенгри требует хорошей физической подготовки, опыта и использования специального снаряжения.</p>
+                <p style="font-style:candra; font-size: 20px;">Как добраться.Сначала добираемся до села Байдибек на джипе, а затем пешком до базового лагеря. Дорога занимает 8-10 часов.</p>
+            <picture>
+            <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcRcBec6i-07xbYqsD1WRtJQlSSgy_XeOORgE1CtaG8M2amJUXpmpPRP79pUYM1jrPzzW15AQJGhvmoCcbWblem6T26Eh3kA2YdtybpgOA"   width="825" height="500">
+            </picture>
+             <picture>
+            <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcRr3XwXyLz88xeTWxKpMLL6wn82z4KaPFhWuY1ICG-KSw-XbwA4J6CKmUpa_SqLkslUl5PLdMcNbikzKnbRNAGPYc3BcYO3Wqvs6gokLQ"   width="825" height="500">
+             </picture>
+            </div>
+        </div>
+              </div>
+    </section>
+
+    <section class="why-choose-us">
+        <div class="container">
+    <h2>Следите за нами</h2>
+    <div class="social-buttons">
+        <a href="https://www.instagram.com/raimbekov.nurislam/" target="_blank" class="social-button ig">Instagram</a>
+    </div>
+</div>
+          <a href="{{ url_for('ot_zov') }}"><h2>Отзывы о нас</h2> </a>
+        <div class="user-options">
+                    <a href="tel:+77079969904" class="callback">Заказать звонок</a>
+                </div>
+    </section>
+</body>
+</html>
